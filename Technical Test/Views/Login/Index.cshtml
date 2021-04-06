@@ -1,0 +1,57 @@
+﻿@model Technical_Test.Models.Login
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Css/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <div align="center">
+        <h1>Login</h1>
+        <form method="post">
+
+            <table>
+                <tr>
+                    <td>
+                        <label>User Name : </label>
+                    </td>
+                    <td>
+                        <input class="texts" type="text" name="UserName" placeholder="Enter Your User Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Password : </label>
+                    </td>
+                    <td>
+                        <input class="texts" type="password" name="Password" placeholder="Enter Your Password">
+                    </td>
+                </tr>
+
+            </table>
+            <br />
+            <button class="block" type="submit">Login</button>
+
+
+
+
+
+        </form>
+    </div>
+    @if (ViewBag.Message != null)
+    {
+        <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+        </script>
+    }
+</body>
+</html>
